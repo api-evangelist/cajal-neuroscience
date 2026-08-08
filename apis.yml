@@ -1,17 +1,41 @@
 aid: cajal-neuroscience
 name: Cajal Neuroscience
-description: 'Cajal Neuroscience is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Cajal Neuroscience, which now operates publicly as Cajal Therapeutics, is a
+  Seattle, Washington biotechnology company founded in 2020 by Alex Vaughan, Andrew Dervan and
+  Ian Peikon, and launched in November 2022 with a $96 million Series A led by The Column Group
+  and Lux Capital with participation from Two Sigma Ventures and Bristol Myers Squibb. The
+  company develops small-molecule and RNA medicines that restore iron homeostasis, built around
+  "iron mobilizers" — small molecules that transport iron across membranes into the compartments
+  where it is required, bypassing disease-driven bottlenecks such as chronic inflammation,
+  altered iron transporter expression and lysosomal dysfunction. Its pipeline spans systemic
+  disease (CTX001, a clinical-stage iron mobilizer for anemia of chronic kidney disease; CTX201
+  and CTX211, preclinical siRNA programs for inflammatory anemia and myelofibrosis anemia) and
+  CNS disease (a discovery-stage brain-penetrant iron mobilizer for Parkinson''s disease). This
+  is a therapeutics company, not a software or data platform company: it publishes no developer
+  program, no public API, and no machine-readable API contract. Its public GitHub organization
+  contains open-source laboratory hardware and firmware (a drone-motor spin coater, a microfluidic
+  pressure sensor, a flow sensor) plus forks of third-party single-cell and genomics analysis
+  tooling — none of which expose a network API.'
 url: https://raw.githubusercontent.com/api-evangelist/cajal-neuroscience/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profile
+x-tier-reason: no-api-surface
+image: https://www.cajal-tx.com/apple-touch-icon.png
 specificationVersion: '0.20'
 created: '2026-08-08'
 modified: '2026-08-08'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Drug Discovery
+- Neurodegeneration
+- Neuroscience
+- Therapeutics
+- Life Sciences
+- Genomics
+- Health
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +43,47 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/cajal-neuroscience-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.cajal-tx.com/
+- type: GitHubOrganization
+  url: https://github.com/CajalNeuroscience
+- type: PrivacyPolicy
+  url: https://www.cajal-tx.com/privacy
+- type: News
+  url: https://www.cajal-tx.com/news
+- type: Contact
+  url: https://www.cajal-tx.com/contact
+- type: Careers
+  url: https://www.cajal-tx.com/careers
+- type: LinkedIn
+  url: https://www.linkedin.com/company/cajal-tx/
+- type: LLMsTxt
+  url: llms/cajal-neuroscience-llms.txt
+x-enrichment:
+  date: '2026-08-08'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Cajal is a clinical-stage iron-homeostasis therapeutics company (CTX001 in Phase 1) whose
+    only public engineering output is open-source lab-bench hardware — a drone-motor spin coater
+    and two microfluidic sensors — so there is no product for an API to expose; cajalneuro.com
+    307-redirects to cajal-tx.com, and api./docs./developer./data.cajal-tx.com have no DNS record
+    at all.
+  evidence:
+  - url: https://www.cajal-tx.com/openapi.json
+    status: 404
+  - url: https://www.cajal-tx.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.cajal-tx.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.cajal-tx.com/llms.txt
+    status: 404
+  - url: https://api.github.com/orgs/CajalNeuroscience
+    status: 200
+  checked: '2026-08-08'

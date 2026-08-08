@@ -1,0 +1,55 @@
+# Cajal Neuroscience (Cajal Therapeutics)
+
+> Seattle, Washington biotechnology company developing small-molecule and RNA medicines that
+> restore iron homeostasis. Founded 2020; launched November 2022 with a $96M Series A led by
+> The Column Group and Lux Capital. Now operating publicly as Cajal Therapeutics. This company
+> publishes NO public API, developer program, or machine-readable API contract — the entries
+> below are company and open-source-hardware resources only.
+
+## Company
+
+- [Cajal Therapeutics](https://www.cajal-tx.com/): Corporate site (www.cajalneuro.com 307-redirects here).
+- [Science](https://www.cajal-tx.com/science): Iron mobilizers — small molecules that transport iron across membranes into the compartments where it is required.
+- [Pipeline](https://www.cajal-tx.com/pipeline): CTX001 (small molecule, CKD anemia, clinical); CTX201 and CTX211 (siRNA, inflammatory anemia and myelofibrosis anemia, preclinical); undisclosed siRNA/ASO hematologic program; brain-penetrant iron mobilizer for Parkinson's disease (discovery).
+- [Team](https://www.cajal-tx.com/team): Leadership and scientific team.
+- [Careers](https://www.cajal-tx.com/careers): Open roles.
+- [News](https://www.cajal-tx.com/news): Press releases and announcements.
+- [Contact](https://www.cajal-tx.com/contact): info@cajal-tx.com — 1150 Eastlake Avenue E, Ste 600/700, Seattle, WA 98109.
+- [Privacy Policy](https://www.cajal-tx.com/privacy)
+- [LinkedIn](https://www.linkedin.com/company/cajal-tx/)
+
+## Open source
+
+The public GitHub organization holds open-source LABORATORY HARDWARE and firmware plus forks of
+third-party genomics tooling. None of these are network APIs, SDKs, or client libraries.
+
+- [GitHub organization](https://github.com/CajalNeuroscience): Cajal Therapeutics, Seattle WA.
+- [droneSpinCoater](https://github.com/CajalNeuroscience/droneSpinCoater): Spin coater based on a drone brushless motor (Arduino/C++, CAD, PCB). First-party.
+- [microPressureSensor](https://github.com/CajalNeuroscience/microPressureSensor): CN-1000 microfluidic pressure sensor (CAD, PCB, software). First-party.
+- [flowSensor](https://github.com/CajalNeuroscience/flowSensor): Firmware and PC software for a Sensirion flow sensor (Arduino, Python, schematic). First-party.
+- [SCENT](https://github.com/CajalNeuroscience/SCENT), [TWAS](https://github.com/CajalNeuroscience/TWAS), [scGPT](https://github.com/CajalNeuroscience/scGPT), [metacells](https://github.com/CajalNeuroscience/metacells), [HELM2NotationToolkit](https://github.com/CajalNeuroscience/HELM2NotationToolkit): forks of third-party analysis tooling.
+
+## API surface
+
+None. Contract discovery on 2026-08-08 probed the corporate host and the candidate API/docs hosts
+and found no OpenAPI, no GraphQL endpoint, no MCP server, no A2A agent card, and no `/.well-known/`
+discovery documents:
+
+- https://www.cajal-tx.com/openapi.json — 404
+- https://www.cajal-tx.com/swagger.json — 404
+- https://www.cajal-tx.com/api-docs — 404
+- https://www.cajal-tx.com/llms.txt — 404
+- https://www.cajal-tx.com/.well-known/agent-card.json — 404
+- https://www.cajal-tx.com/.well-known/agent.json — 404
+- https://www.cajal-tx.com/.well-known/security.txt — 404
+- https://www.cajal-tx.com/.well-known/api-catalog — 404
+- api.cajal-tx.com, docs.cajal-tx.com, developer.cajal-tx.com, data.cajal-tx.com — no DNS record
+
+## Artifacts in this profile
+
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/cajal-neuroscience/refs/heads/main/security/cajal-neuroscience-domain-security.yml): TLS/HSTS/DNSSEC/CAA/SPF/DMARC probe of cajal-tx.com.
+
+---
+generated: '2026-08-08'
+method: generated
+source: apis.yml + live probes of https://www.cajal-tx.com and https://github.com/CajalNeuroscience
