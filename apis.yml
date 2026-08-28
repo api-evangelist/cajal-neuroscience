@@ -21,6 +21,17 @@ x-type: company
 x-source: harvest:secondary-market
 x-tier: profile
 x-tier-reason: no-api-surface
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://www.cajal-tx.com/apple-touch-icon.png
 specificationVersion: '0.23'
 created: '2026-08-08'
